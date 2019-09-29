@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>count-down</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <article>
+            <h2>Deals Of The Week</h2>
+            <p class="sale"><strong>SALE UP TO<br>50% ALL BIKE</strong></p>
+            <div class="countdown">
+
+                <div class="teller">
+                    <div class="vak days" id="day"></div>
+                    <p>DAYS</p>
+
+
+                </div>
+                <p class="dubbelpunt">:</p>
+
+                <div class="teller">
+                    <div class="vak hours" id="hour"></div>
+                    <p>HOURS</p>
+
+                </div>
+
+                <p class="dubbelpunt">:</p>
+
+
+                <div class="teller">
+                    <div class="vak minutes" id="minute"></div>
+                    <p>MINS</p>
+
+                </div>
+
+                <p class="dubbelpunt">:</p>
+
+
+                <div class="teller">
+                    <div class="vak seconds" id="second"></div>
+                    <p>SECS</p>
+
+                </div>
+
+            </div>
+
+            <a href="#">GO TO SHOP</a>
+
+
+        </article>
+        <div class="foto">
+            <img src="./img/bike-countdown.png" alt="bike">
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+        var deadline = new Date("dec 31, 2019 15:37:25").getTime();
+
+        var x = setInterval(function() {
+
+            var now = new Date().getTime();
+            var t = deadline - now;
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+            document.getElementById("day").innerHTML = days;
+            document.getElementById("hour").innerHTML = hours;
+            document.getElementById("minute").innerHTML = minutes;
+            document.getElementById("second").innerHTML = seconds;
+            if (t < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "TIME UP";
+                document.getElementById("day").innerHTML = '0';
+                document.getElementById("hour").innerHTML = '0';
+                document.getElementById("minute").innerHTML = '0';
+                document.getElementById("second").innerHTML = '0';
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

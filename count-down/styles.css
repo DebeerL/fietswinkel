@@ -1,0 +1,112 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* border: solid 1px red; */
+            font-weight: 400;
+        }
+        
+        .container {
+            min-width: 80vw;
+            max-width: 95vw;
+            margin: 0 auto;
+            display: flex;
+        }
+        
+        article {
+            width: 50%;
+            padding: 7% 3% 7% 7%;
+        }
+        
+        ul {
+            display: flex;
+        }
+        
+        h2 {
+            font-size: 28px;
+            font-family: Montserrat, sans-serif;
+            font-style: italic;
+            color: #000;
+            margin-bottom: 15px;
+        }
+        
+        p.sale,
+        p.dubbelpunt {
+            font-family: Montserrat, sans-serif;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #000;
+            font-size: 50px;
+            text-shadow: 2px 5px 5px rgba(0, 0, 0, .25);
+            margin-bottom: 55px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #666;
+            border: solid 1px #666;
+            padding: 15px 30px;
+        }
+        
+        a:hover {
+            background-color: #d33;
+            border: none;
+            color: white;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 40px 0;
+            text-align: center;
+            margin-bottom: 55px;
+            padding-right: 75px;
+        }
+        
+        .foto {
+            width: 50%;
+            padding: 5%;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* text-align: center; */
+            margin: auto;
+        }
+        
+        p {
+            font-family: Montserrat, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: #666;
+        }
+        
+        .vak {
+            background-color: #d33;
+            padding: 6px 35px;
+            color: white;
+            text-align-last: center;
+            font-size: 2rem;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        @media only screen and (max-width: 1090px) {
+            .container {
+                display: block;
+            }
+            article {
+                width: 100%;
+                text-align: center;
+            }
+            .foto {
+                width: 100%;
+            }
+            .countdown {
+                max-width: 65%;
+                margin: 0 auto;
+                padding: 0;
+            }
+        }
