@@ -1,0 +1,14 @@
+header{
+    background-color: blueviolet;
+}
+
+header aside{
+    background-color: pink;
+}
+
+
+section.discovery img{
+    height: 900px;
+    width: 1200px;
+}
+
